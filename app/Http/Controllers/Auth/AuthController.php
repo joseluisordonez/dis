@@ -8,6 +8,13 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
+/* para los mensajes*/
+use Laracasts\Flash\Flash;
+
+/*para el postlogin*/
+use \Illuminate\Http\Request;
+use \Illuminate\Http\Response;
+
 class AuthController extends Controller
 {
     /*
@@ -28,8 +35,10 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
-
+    protected $redirectTo = '/';
+      protected $redirectPath ='/admin';//redirigir despues del login
+    protected $redirectAfterLogout = '/';//redirigir despues del logout
+  
     /**
      * Create a new authentication controller instance.
      *
@@ -39,6 +48,8 @@ class AuthController extends Controller
     {
         $this->middleware('guest', ['except' => 'logout']);
     }
+
+    
 
     /**
      * Get a validator for an incoming registration request.
@@ -68,5 +79,14 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+    protected function getLogin()
+    {
+        return view('login');
+    }
+    public function postLogin(Request $request)
+    {
+        Flash::error('Usuario o contraseña incorrectos');
+        return $this->login($request);
     }
 }

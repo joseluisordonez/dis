@@ -11,8 +11,9 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $table='users';
     protected $fillable = [
-        'name', 'email', 'password',
+        'name','apellido', 'email', 'password','permisos'
     ];
 
     /**
@@ -23,4 +24,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    // Funciones para hacer las relaciones 1 (hasMany) a muchos (belongsTo) 
+    // se debe crear una funcion en cada modelo
+    public function cliente()
+    {
+        return $this->hasMany('App\cliente');
+    }
 }

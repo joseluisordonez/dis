@@ -156,6 +156,15 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Providers LaravelCollective
+         */
+         Collective\Html\HtmlServiceProvider::class, 
+
+        /*
+         * LaracastFlash Easy flash notifications
+         */
+        Laracasts\Flash\FlashServiceProvider::class
     ],
 
     /*
@@ -202,6 +211,16 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
 
+        /*
+         * Aliases LaravelCollective
+         */
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+
+        /*
+         * LaracastFlash
+         */
+        'Flash' => Laracasts\Flash\Flash::class
     ],
 
 ];
