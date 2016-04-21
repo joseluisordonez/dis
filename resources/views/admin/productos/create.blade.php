@@ -67,37 +67,31 @@
 				<div class="col-sm-2">
 					{!! Form::number('precio_mayoreo',null, ['class' => 'form-control'])!!}
 				</div>
+				{!! Form::label ('stock','Stock',['class'=>'col-sm-2 control-label'])!!}
+				<div class="col-sm-2">
+					{!! Form::number('stock',null, ['class' => 'form-control'])!!}
+				</div>			
 			</div>
 			<div class="form-group">
 				{!! Form::label ('precio_mediomayoreo','Precio Mediomayoreo',['class'=>'col-sm-2 control-label'])!!}
 				<div class="col-sm-2">
 					{!! Form::number('precio_mediomayoreo',null, ['class' => 'form-control'])!!}
 				</div>
+				{!! Form::label ('stock_min','Stock Minimo',['class'=>'col-sm-2 control-label'])!!}
+				<div class="col-sm-2">
+					{!! Form::number('stock_min',null, ['class' => 'form-control'])!!}
+				</div>			
 			</div>
 			<div class="form-group">
 				{!! Form::label ('precio_menudeo','Precio Menudeo',['class'=>'col-sm-2 control-label'])!!}
 				<div class="col-sm-2">
 					{!! Form::number('precio_menudeo',null, ['class' => 'form-control'])!!}
 				</div>
-			</div>
-			<div class="form-group">
-				{!! Form::label ('stock','Stock',['class'=>'col-sm-2 control-label'])!!}
-				<div class="col-sm-2">
-					{!! Form::number('stock',null, ['class' => 'form-control'])!!}
-				</div>
-			</div>
-			<div class="form-group">
-				{!! Form::label ('stock_min','Stock Minimo',['class'=>'col-sm-2 control-label'])!!}
-				<div class="col-sm-2">
-					{!! Form::number('stock_min',null, ['class' => 'form-control'])!!}
-				</div>
-			</div>
-			<div class="form-group">
 				{!! Form::label ('stock_max','Stock Máximo',['class'=>'col-sm-2 control-label'])!!}
 				<div class="col-sm-2">
 					{!! Form::number('stock_max',null, ['class' => 'form-control'])!!}
-				</div>
-			</div>
+				</div>			
+			</div>			
 			<div class="form-group">
 				{!! Form::label('imagen','Imagen',['class'=>'col-sm-2 control-label']) !!}
 				<div class="col-sm-4">

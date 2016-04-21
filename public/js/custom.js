@@ -8,7 +8,7 @@
  * File Description: Place here your custom scripts
  */
 $("#categoria").change(function(event){
-	$.get(""+event.target.value+"/subcategorias",function(response,categoria){
+	$.get(window.location.origin+"/dis/public/admin/productos/"+event.target.value+"/subcategorias",function(response,categoria){
 		$("#subcategoria").empty();
 		$("#subcategoria").prop('disabled', false);
 		for(i=0; i<response.length;i++){

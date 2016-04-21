@@ -833,7 +833,7 @@
 		if($("#contact-form").length>0) {
 			$("#contact-form").validate({
 				submitHandler: function(form) {
-					$('.submit-button').button("loading");
+					$('.submit-button').button("cargando");
 					$.ajax({
 						type: "POST",
 						url: "php/email-sender.php",
@@ -848,7 +848,7 @@
 							if (data.sent == "yes") {
 								$("#MessageSent").removeClass("hidden");
 								$("#MessageNotSent").addClass("hidden");
-								$(".submit-button").removeClass("btn-default").addClass("btn-success").prop('value', 'Message Sent');
+								$(".submit-button").removeClass("btn-default").addClass("btn-success").prop('value', 'Mensaje Enviado');
 								$("#contact-form .form-control").each(function() { 
 									$(this).prop('value', '').parent().removeClass("has-success").removeClass("has-error");
 								});
@@ -929,7 +929,7 @@
 							if (data.sent == "yes") {
 								$("#MessageSent2").removeClass("hidden");
 								$("#MessageNotSent2").addClass("hidden");
-								$(".submit-button").removeClass("btn-default").addClass("btn-success").prop('value', 'Message Sent');
+								$(".submit-button").removeClass("btn-default").addClass("btn-success").prop('value', 'Mensaje Enviado');
 								$("#footer-form .form-control").each(function() { 
 									$(this).prop('value', '').parent().removeClass("has-success").removeClass("has-error");
 								});
@@ -1006,7 +1006,7 @@
 							if (data.sent == "yes") {
 								$("#MessageSent3").removeClass("hidden");
 								$("#MessageNotSent3").addClass("hidden");
-								$(".submit-button").removeClass("btn-default").addClass("btn-success").prop('value', 'Message Sent');
+								$(".submit-button").removeClass("btn-default").addClass("btn-success").prop('value', 'Mensaje Enviado');
 								$("#sidebar-form .form-control").each(function() { 
 									$(this).prop('value', '').parent().removeClass("has-success").removeClass("has-error");
 								});

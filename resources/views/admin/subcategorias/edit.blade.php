@@ -51,7 +51,30 @@
 				</div>
 			</div>
 			<div class="col-sm-2">
-				<a href="{{ Route('admin.subcategorias.destroy',$subcategoria->id)}}" onclick="return confirm('¿Seguro que quieres eliminar?')" class="btn btn-danger">Eliminar</a>
+				<a class="btn btn-danger" data-toggle="modal" data-target="#myModal">Eliminar</a>
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+								<h4 class="modal-title" id="myModalLabel">Eliminar Subcategoria</h4>
+							</div>
+							<div class="modal-body">
+								<p>Seguro que quieres eliminar la subcategoria {{$subcategoria->nombre}}?</p>	
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-sm btn-dark" data-dismiss="modal">Cerrar</button>
+								<a href="{{ Route('admin.subcategorias.destroy',$subcategoria->id)}}" type="button" class="btn btn-sm btn-default" >Eliminar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fin Modal -->
+			</div>
+
+			
+		{!! Form::close() !!}
 			</div>
 
 			

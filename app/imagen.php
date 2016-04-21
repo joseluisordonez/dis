@@ -16,6 +16,6 @@ class imagen extends Model
     // se debe crear una funcion en cada modelo
     public function producto()
     {
-        return $this->belongsTo('App\producto');
+        return $this->HasOne('App\producto');
     }
 }

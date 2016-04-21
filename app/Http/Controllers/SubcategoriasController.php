@@ -94,7 +94,21 @@ class SubcategoriasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $subcategoria = subcategoria::find($id);
+        $this->validate($request, [
+            'nombre'            =>      'required|max:50|unique:subcategorias,nombre,'.$id,
+            'categoria_id'      =>      'required',
+        ]);
+        //$subcategoria ->fill($request->all()); esto seria lo mismo que lo siguiente cuando todos los valores se encuentran
+        $subcategoria->nombre =$request->nombre;
+        $subcategoria->descripcion = $request->descripcion;
+        $subcategoria->categoria_id = $request->categoria_id;
+        
+        $subcategoria->save();
+
+        Flash::success('Subcategoria '. $subcategoria->name .' editado exitosamente!!');
+
+        return redirect()->route('admin.subcategorias.index');
     }
 
     /**

@@ -22,8 +22,17 @@
 	@include('flash::message')
 	<hr>
 	<a href="{{ route('admin.productos.create')}}" class="btn btn-white"> Nuevo Producto</a>
+	<!-- Buscador de Productos(en el modelo se hace la funcion para buscar) -->
+	{!!Form::open(['route' => 'admin.productos.index', 'method' => 'GET', 'class' => 'navbar-form pull-right'])!!}
+		<div class="input-group">
+			{!!Form::text('nombre',null, ['class' => 'form-control', 'placeholder' => 'Buscar producto...', 'aria-describedby'=>'search'])!!}
+			<span class="input-group-addon" id="search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+		</div>
+	{!!Form::close()!!}
+	<!-- Fin del Buscador -->
 	<table class="table table-hover">
 		<thead>
+			<th>Imagen</th>
 			<th>Código</th>
 			<th>Nombre</th>
 			<th>Descripcion</th>
@@ -33,6 +42,7 @@
 		<tbody>
 			@foreach($productos as $producto)
 				<tr onclick="location.href='{{ route('admin.productos.edit',$producto->id)}}'">
+					<td><img src="{{ asset('images/productos')}}/{{$producto->imagen->nombre}}" style="width:100px"></td>
 					<td>{{$producto->codigo}}</td>
 					<td>{{$producto->nombre}}</td>
 					<td>{{$producto->descripcion}}</td>

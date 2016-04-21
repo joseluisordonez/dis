@@ -17,6 +17,8 @@ use Laracasts\Flash\Flash;
 
 /*Request para validacion*/
 use App\Http\Requests\ProductoRequest;
+//File es para el manejo de archivos (delete)
+use File;
 
 class ProductosController extends Controller
 {
@@ -25,9 +27,13 @@ class ProductosController extends Controller
      *
      * @return Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $productos = Producto::orderBy('nombre','ASC')->paginate(20);
+        $productos = Producto::Search($request->nombre)->orderBy('nombre','ASC')->paginate(30);
+        $productos->each(function($productos){
+            $productos->imagen;
+        });
+        //dd($productos);
         return view ('admin.productos.productos')->with('productos',$productos);
     }
 
@@ -59,13 +65,7 @@ class ProductosController extends Controller
      */
     public function store(Request $request)
     {
-        if ($request->file('imagen'))
-        {
-            $file   =   $request->file('imagen');
-            $name   =   'imagen_'.time().'.'.$file->getClientOriginalExtension();
-            $path   =   public_path(). '/images/productos/';
-            $file->move($path,$name);   
-        }
+       
         $producto = new Producto ($request ->all());
         $this->validate($request,[
             'nombre'            =>      'required|min:5|max:50|unique:productos,nombre',
@@ -75,12 +75,28 @@ class ProductosController extends Controller
             ]);   
         $producto ->save();
 
+        if ($request->file('imagen'))
+        {
+            $file   =   $request->file('imagen');
+            $name   =   'producto_'.time().'.'.$file->getClientOriginalExtension();
+            //public_path() hace referencia a la carpeta public, pero en el hosting hay uqe cambiarlo, estoy se hace con una 
+            //funcion uqe se encuentra en el archivo index.php uqe esta en la carpeta public en el hosting
+            $path   =     public_path().'/images/productos/';
         
-        $imagen = new Imagen();
-        $imagen->nombre =$name;
-        $imagen->producto_id =$producto->id;
-        //$imagen->producto()->associate($producto);//producto() es la funcion uqe esta en el modelo imagen
-        $imagen->save(); 
+            $file->move($path,$name);  
+        
+            $imagen = new Imagen();
+            $imagen->nombre =$name;
+            $imagen->producto_id =$producto->id;
+            $imagen->save();
+         }
+         else
+         {
+            $imagen = new Imagen();
+            $imagen->nombre ="sin_imagen.jpg";
+            $imagen->producto_id =$producto->id;
+            $imagen->save();
+         }
         Flash::success('Producto '. $producto->name .' registrada exitosamente!!');
 
         return redirect()->route('admin.productos.index');
@@ -106,11 +122,15 @@ class ProductosController extends Controller
     public function edit($id)
     {
         $producto = producto::find($id);
+        
         $categorias = Categoria::orderBy('nombre','ASC')
             ->lists('nombre','id');//esto se envia para el droplist de categorias
+        $subcategorias = Subcategoria::where('categoria_id','=',$producto->categoria_id)
+            ->lists('nombre','id');//esto se envia para el droplist de categorias;
         return view('admin.productos.edit')
             ->with('producto',$producto)
-            ->with('categorias',$categorias);
+            ->with('categorias',$categorias)
+            ->with('subcategorias',$subcategorias);
     }   
 
     /**
@@ -121,7 +141,32 @@ class ProductosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        $producto = producto::find($id);
+        $this->validate($request, [
+            'nombre'            =>      'required|min:5|max:50',
+            'codigo'            =>      'required|max:30|unique:productos,codigo,'.$id,
+            'categoria_id'      =>      'required',
+            'subcategoria_id'   =>      'required',
+        ]);
+        //$producto ->fill($request->all()); esto seria lo mismo que lo siguiente cuando todos los valores se encuentran
+        $producto->nombre =$request->nombre;
+        $producto->descripcion = $request->descripcion;
+        $producto->codigo = $request->codigo;
+        $producto->costo = $request->costo;
+        $producto->unidad_medida = $request->unidad_medida;
+        $producto->precio_mayoreo = $request->precio_mayoreo;
+        $producto->precio_mediomayoreo = $request->precio_mediomayoreo;
+        $producto->precio_menudeo = $request->precio_menudeo;
+        $producto->categoria_id = $request->categoria_id;
+        $producto->subcategoria_id = $request->subcategoria_id;
+        $producto->stock = $request->stock;
+        $producto->stock_min = $request->stock_min;
+        $producto->stock_max = $request->stock_max;
+        $producto->save();
+
+        Flash::success('Producto '. $producto->name .' editado exitosamente!!');
+
+        return redirect()->route('admin.productos.index');
     }
 
     /**
@@ -133,10 +178,19 @@ class ProductosController extends Controller
     public function destroy($id)
     {
         $producto =Producto::find($id);
+        if($producto->imagen->nombre!='sin_imagen.jpg')
+            { 
+                $path   =     public_path().'/images/productos/';
+                
+               File::delete( $path.$producto->imagen->nombre );
+            }
+
+        
         $producto->delete();
 
         Flash::success('El '. $producto->nombre .' fue eliminada exitosamente!!');
 
         return redirect()->route('admin.productos.index');
+        
     }
 }

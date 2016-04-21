@@ -33,6 +33,7 @@
 					Oops! Algo no salio bien, por favor intentalo de nuevo.
 				</div>
 				<div class="contact-form">
+					<!-- Configuracion en el archivo public/php/email-sender.php -->
 					<form id="contact-form" role="form" novalidate="novalidate">
 						<div class="form-group has-feedback">
 							<label for="name">Nombre*</label>
@@ -54,7 +55,7 @@
 							<textarea class="form-control" rows="6" id="message" name="message" placeholder=""></textarea>
 							<i class="fa fa-pencil form-control-feedback"></i>
 						</div>
-						<input type="submit" value="Submit" class="submit-button btn btn-default">
+						<input type="submit" value="Enviar" class="submit-button btn btn-default">
 					</form>
 				</div>
 			</div>

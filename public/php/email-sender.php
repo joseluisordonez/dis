@@ -3,7 +3,7 @@ session_cache_limiter('nocache');
 header('Expires: ' . gmdate('r', 0));
 header('Content-type: application/json');
 
-$Recipient = 'ing.joseluisordonez@gmail.com'; // <-- Set your email here
+$Recipient = 'contacto@distribuidorais.com'; // <-- Set your email here
 
 $subject = $_POST['subject'];
 
@@ -16,11 +16,11 @@ if($Recipient) {
 	$Category = $_POST['category'];
 
 	$Email_body = "";
-	$Email_body .= "From: " . $Name . "\n" .
+	$Email_body .= "De: " . $Name . "\n" .
 				   "Email: " . $Email . "\n" .
-				   "Subject: " . $Subject . "\n" .
-				   "Message: " . $Message . "\n" .
-				   "Category: " . $Category . "\n";
+				   "Asunto: " . $Subject . "\n" .
+				   "Mensaje: " . $Message . "\n" .
+				   //"Category: " . $Category . "\n";
 
 	$Email_headers = "";
 	$Email_headers .= 'From: ' . $Name . ' <' . $Email . '>' . "\r\n".

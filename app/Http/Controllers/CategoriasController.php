@@ -114,7 +114,7 @@ class CategoriasController extends Controller
         $categoria =Categoria::find($id);
         $categoria->delete();
 
-        Flash::success('La '. $categoria->nombre .' fue eliminada exitosamente!!');
+        Flash::success('La categoria '. $categoria->nombre .' fue eliminada exitosamente!!');
 
         return redirect()->route('admin.categorias.index');
     }

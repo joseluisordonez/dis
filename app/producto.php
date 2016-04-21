@@ -36,6 +36,11 @@ class Producto extends Model
     }
     public function imagen()
     {
-        return $this->hasMany('App\imagen');
+        return $this->hasOne('App\imagen');
+    }
+    //funcion para hacer la busqueda de productos, estar funciones deben tener al inicio la palabra reservada scope
+    public function scopeSearch($query, $nombre)
+    {
+        return $query->where('nombre', 'LIKE', "%$nombre%");
     }
 }

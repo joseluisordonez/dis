@@ -29,13 +29,13 @@
 			<div class="form-group">
 				{!! Form::label ('categoria_id','Categoria',['class'=>'col-sm-2 control-label'])!!}
 				<div class="col-sm-4">
-					{!! Form::select ('categoria_id',$categorias,null,['class'=>'form-control', 'placeholder' => 'Seleccione Categoria...','id' =>'categoria'])!!}
+					{!! Form::select ('categoria_id',$categorias,$producto->categoria_id,['class'=>'form-control','id' =>'categoria'])!!}
 				</div>
 			</div>
 			<div class="form-group">
 				{!! Form::label ('subcategoria_id','Subcategoria',['class'=>'col-sm-2 control-label'])!!}
 				<div class="col-sm-4">
-					{!! Form::select ('subcategoria_id',[ 'placeholder' => 'Seleccione Subcategoria...'],null,['class' => 'form-control','id' =>'subcategoria','disabled'])!!}
+					{!! Form::select ('subcategoria_id',$subcategorias,$producto->subcategoria_id,['class' => 'form-control','id' =>'subcategoria'])!!}
 				</div>
 			</div>
 			<div class="form-group">
@@ -67,32 +67,28 @@
 				<div class="col-sm-2">
 					{!! Form::number('precio_mayoreo',$producto->precio_mayoreo, ['class' => 'form-control'])!!}
 				</div>
-			</div>
-			<div class="form-group">
-				{!! Form::label ('precio_mediomayoreo','Precio Mediomayoreo',['class'=>'col-sm-2 control-label'])!!}
-				<div class="col-sm-2">
-					{!! Form::number('precio_mediomayoreo',$producto->precio_mediomayoreo, ['class' => 'form-control'])!!}
-				</div>
-			</div>
-			<div class="form-group">
-				{!! Form::label ('precio_menudeo','Precio Menudeo',['class'=>'col-sm-2 control-label'])!!}
-				<div class="col-sm-2">
-					{!! Form::number('precio_menudeo',$producto->precio_menudeo, ['class' => 'form-control'])!!}
-				</div>
-			</div>
-			<div class="form-group">
 				{!! Form::label ('stock','Stock',['class'=>'col-sm-2 control-label'])!!}
 				<div class="col-sm-2">
 					{!! Form::number('stock',$producto->stock, ['class' => 'form-control'])!!}
 				</div>
 			</div>
 			<div class="form-group">
+				{!! Form::label ('precio_mediomayoreo','Precio Mediomayoreo',['class'=>'col-sm-2 control-label'])!!}
+				<div class="col-sm-2">
+					{!! Form::number('precio_mediomayoreo',$producto->precio_mediomayoreo, ['class' => 'form-control'])!!}
+				</div>
 				{!! Form::label ('stock_min','Stock Minimo',['class'=>'col-sm-2 control-label'])!!}
 				<div class="col-sm-2">
 					{!! Form::number('stock_min',$producto->stock_min, ['class' => 'form-control'])!!}
 				</div>
+				
 			</div>
 			<div class="form-group">
+				{!! Form::label ('precio_menudeo','Precio Menudeo',['class'=>'col-sm-2 control-label'])!!}
+				<div class="col-sm-2">
+					{!! Form::number('precio_menudeo',$producto->precio_menudeo, ['class' => 'form-control'])!!}
+				</div>
+				
 				{!! Form::label ('stock_max','Stock Máximo',['class'=>'col-sm-2 control-label'])!!}
 				<div class="col-sm-2">
 					{!! Form::number('stock_max',$producto->stock_max, ['class' => 'form-control'])!!}
@@ -105,7 +101,30 @@
 				</div>
 			</div>
 			<div class="col-sm-2">
-				<a href="{{ Route('admin.productos.destroy',$producto->id)}}" onclick="return confirm('¿Seguro que quieres eliminar?')" class="btn btn-danger">Eliminar</a>
+				<a class="btn btn-danger" data-toggle="modal" data-target="#myModal">Eliminar</a>
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+								<h4 class="modal-title" id="myModalLabel">Eliminar Producto</h4>
+							</div>
+							<div class="modal-body">
+								<p>Seguro que quieres eliminar el producto {{$producto->nombre}}?</p>	
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-sm btn-dark" data-dismiss="modal">Cerrar</button>
+								<a href="{{ Route('admin.productos.destroy',$producto->id)}}" type="button" class="btn btn-sm btn-default" >Eliminar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fin Modal -->
+			</div>
+
+			
+		{!! Form::close() !!}
 			</div>
 
 			

@@ -3726,7 +3726,7 @@ a.overlay.small i {
 }
 
 /* arrows for parent menu items */
-.dropdown>a:before {
+/*.dropdown>a:before {
 	font-family: 'FontAwesome';
 	content: "\f107";
 	position: absolute;
@@ -3735,7 +3735,7 @@ a.overlay.small i {
 	right: 6px;
 	line-height: 1;
 	color: #d1d1d1;
-}
+}*/
 .transparent.header:not(.dark) .dropdown>a:before { 
 	color: #666666;
 }

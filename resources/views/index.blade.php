@@ -110,7 +110,7 @@
 						data-speed="600"
 						data-start="2200"
 						data-end="9400"
-						data-endspeed="600">Chalecos 
+						data-endspeed="600">Zapatos 
 					</div>
 
 					<!-- LAYER NR. 10 -->
@@ -268,7 +268,7 @@
 						data-speed="600"
 						data-start="1200"
 						data-end="9400"
-						data-endspeed="600">Cleadfasdfan &amp; Unique Design
+						data-endspeed="600">Abrasivos
 					</div>
 
 					<!-- LAYER NR. 2 -->
@@ -288,7 +288,7 @@
 						data-speed="600"
 						data-start="1600"
 						data-end="9400"
-						data-endspeed="600">After Sale Support
+						data-endspeed="600">Discos de corte
 					</div>
 
 					<!-- LAYER NR. 4 -->
@@ -308,7 +308,7 @@
 						data-speed="600"
 						data-start="1800"
 						data-end="9400"
-						data-endspeed="600">Crystal Clean Code
+						data-endspeed="600">Discos de Diamante
 					</div>
 
 					<!-- LAYER NR. 6 -->
@@ -328,7 +328,7 @@
 						data-speed="600"
 						data-start="2000"
 						data-end="9400"
-						data-endspeed="600">Crossbrowser Compatible
+						data-endspeed="600">Lijas
 					</div>
 
 					<!-- LAYER NR. 8 -->
@@ -348,7 +348,7 @@
 						data-speed="600"
 						data-start="2200"
 						data-end="9400"
-						data-endspeed="600">Latest Technologies Used
+						data-endspeed="600">Cepillos de alambre
 					</div>
 
 					<!-- LAYER NR. 10 -->
@@ -358,7 +358,7 @@
 						data-speed="600"
 						data-start="2400"
 						data-end="9400"
-						data-endspeed="600">Don't miss out!
+						data-endspeed="600">Y mucho más...
 					</div>
 
 					<!-- LAYER NR. 11 -->
@@ -393,515 +393,84 @@
 
 <!-- page-top start-->
 <!-- ================ -->
-<div class="page-top">
+<div class="page-top gray-bg">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 				<div class="call-to-action">
 					<h1 class="title">Distribuidora Industrial de la Sierra</h1>
-					<p>Somos la empresa de distribuicion de equipo de soldadura, abrasivos y equipo de seguridad mas grande de la region </p>
-					<a href="" class="btn btn-white more">
+					<p>Somos la empresa de distribuición de equipo de soldadura, abrasivos y equipo de seguridad mas grande de la región </p>
+					<a href="{{ URL::to( '/nosotros') }}" class="btn btn-white more">
 					Leer más... <i class="pl-10 fa fa-info"></i>
 					</a>
 					o
-					<a href="page-contact.html" class="btn btn-default contact">Contactanos <i class="pl-10 fa fa-phone"></i></a>
+					<a href="{{ URL::to( '/contacto') }}" class="btn btn-default contact">Contactanos <i class="pl-10 fa fa-phone"></i></a>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <!-- page-top end -->
+			<!-- main-container start -->
+			<!-- ================ -->
+			<section class="main-container">
 
-<!-- main-container start -->
-<!-- ================ -->
-<section class="main-container gray-bg">
-
-	<!-- main start -->
-	<!-- ================ -->
-	<div class="main">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h1 class="text-center title">Features</h1>
-					<div class="separator"></div>
-					<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<div class="container">
 					<div class="row">
-						<div class="col-sm-4">
-							<div class="box-style-1 white-bg object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="0">
-								<i class="fa fa-leaf"></i>
-								<h2>Clean Design and Code</h2>
-								<p>Voluptatem ad provident non <a href="#">repudiandae</a> veritatis beatae cupiditate amet reiciendis.</p>
-								<a href="page-services.html" class="btn-default btn">Read More</a>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="box-style-1 white-bg object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="200">
-								<i class="fa fa-laptop"></i>
-								<h2>Very Flexible</h2>
-								<p>Iure sequi unde hic. Sapiente quaerat labore sequi inventore veritatis cumque.</p>
-								<a href="page-services.html" class="btn-default btn">Read More</a>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="box-style-1 white-bg object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="400">
-								<i class="fa fa-sitemap"></i>
-								<h2>Latest Technologies</h2>
-								<p>Inventore dolores aut laboriosam cum consequuntur delectus sequi! Eum est.</p>
-								<a href="page-services.html" class="btn-default btn">Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- main end -->
 
-</section>
-<!-- main-container end -->
+						<!-- main start -->
+						<!-- ================ -->
+						<div class="main col-md-12">
 
-<!-- section start -->
-<!-- ================ -->
-<div class="section clearfix">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h1 class="text-center">About Us</h1>
-				<div class="separator"></div>
-				<p class="lead text-center">Lorem ipsum dolor sit amet laudantium molestias similique.<br> Quisquam incidunt ut laboriosam.</p>
-				<br>
-				<div class="row">
-					<div class="col-md-6">
-						<h2 class="title">iDea - Responsive Website Theme</h2>
-						<div class="row">
-							<div class="col-md-6">
-								<img src="images/section-image-2.png" alt="">
-							</div>
-							<div class="col-md-6">
-								<p>Quo soluta provident, quod reiciendis. Dolores nam totam aut illum ex ratione harum molestias maxime minima tempore, possimus, laudantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-							</div>
-						</div>
-						<p>Esse sequi veniam, assumenda voluptate necessitatibus ipsa dicta vero, minima natus cum cupiditate magnam et placeat quo adipisci.</p>
-						<a href="page-about.html" class="btn btn-white">Learn More</a>
-						<div class="space hidden-md hidden-lg"></div>
-					</div>
-					<div class="col-md-6">
-						<div class="panel-group panel-dark" id="accordion">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-											<i class="fa fa-bold"></i>Bootstrap Based
-										</a>
-									</h4>
-								</div>
-								<div id="collapseOne" class="panel-collapse collapse in">
-									<div class="panel-body">
-										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+							<!-- page-title start -->
+							<!-- ================ -->
+							<h1 class="page-title">Nuestros Productos</h1>
+							<div class="separator-2"></div>
+							<p class="lead">Contamos con una gran variedad de productos disponibles para entrega inmediata  <br class="hidden-sm hidden-xs"> Conocelos.</p>
+							<!-- page-title end -->
+							
+							<!-- shop items start -->
+							<div class="masonry-grid-fitrows row grid-space-20">
+							@foreach($productos as $producto)
+								<div class="col-md-3 col-sm-6 masonry-grid-item">
+									<div class="listing-item">
+										<div class="overlay-container">
+											<img src="{{ asset('images/productos')}}/{{$producto->imagen->nombre}}">
+											
+											<a href="{{ route('producto',$producto->id)}}" class="overlay small">
+												<i class="fa fa-plus"></i>
+												<span>Ver Detalles</span>
+											</a>
+										</div>
+										<div class="listing-item-body clearfix">
+											<h3 class="title"><a href="{{ route('producto',$producto->id)}}">{{$producto->nombre}}</a></h3>
+											<p>{{$producto->descripcion}}</p>
+											<span class="price">${{$producto->precio_menudeo}}</span>
+											<div class="elements-list pull-right">
+												
+												<a href="{{ Url::to('categoria')}}/{{$producto->categoria->id}}">{{$producto->categoria->nombre}}</a>
+											</div>
+										</div>
 									</div>
 								</div>
+							@endforeach	
 							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed">
-											<i class="fa fa-leaf"></i>Clean &amp; powerful code
-										</a>
-									</h4>
-								</div>
-								<div id="collapseTwo" class="panel-collapse collapse">
-									<div class="panel-body">
-										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-									</div>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">
-											<i class="fa fa-html5"></i>HTML5/CSS3
-										</a>
-									</h4>
-								</div>
-								<div id="collapseThree" class="panel-collapse collapse">
-									<div class="panel-body">
-										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-									</div>
-								</div>
-							</div>
+							<!-- shop items end -->
+							
+							<div class="clearfix"></div>
+
+							<!-- pagination start -->
+							{!!$productos->render()!!}
+							<!-- pagination end -->
+
 						</div>
+						<!-- main end -->
+
 					</div>
 				</div>
-				<br>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- section end -->
+			</section>
+			<!-- main-container end -->
 
-<!-- section start -->
-<!-- ================ -->
-<div class="section parallax light-translucent-bg parallax-bg-3">
-	<div class="container">
-		<div class="call-to-action">
-			<div class="row">
-				<div class="col-md-8">
-					<h1 class="title text-center">Clean &amp; Powerful Bootstrap Theme</h1>
-					<p class="text-center">Sed ut Perspiciatis Unde Omnis Iste Sed ut sit  voluptatem accusan tium </p>
-				</div>
-				<div class="col-md-4">
-					<div class="text-center">
-						<a href="#" class="btn btn-default btn-lg">Purchase</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- section end -->
-
-<!-- section start -->
-<!-- ================ -->
-<div class="section clearfix">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-
-				<h1 class="text-center">Why Choose iDea</h1>
-				<div class="separator"></div>
-				<p class="lead text-center">Lorem ipsum dolor sit amet. Maiores, odio ut deleniti doloremque ad at praesentium<br> laudantium molestias similique. Quisquam incidunt ut laboriosam.</p>
-				
-				<!-- Tabs start -->
-				<!-- ================ -->
-				<div class="vertical hc-tabs">
-
-					<!-- Tabs Top -->
-					<div class="hc-tabs-top">
-						<img data-tab="#tab1" src="images/section-image-1.png" alt="iDea" data-tab-animation-effect="fadeInRightSmall">
-						<img data-tab="#tab2" src="images/section-image-2.png" alt="iDea" data-tab-animation-effect="fadeInRightSmall">
-						<img data-tab="#tab3" src="images/section-image-3.png" alt="iDea" data-tab-animation-effect="fadeInRightSmall">
-						<img data-tab="#tab4" src="images/section-image-4.png" alt="iDea" data-tab-animation-effect="fadeInRightSmall">
-						<div class="space"></div>
-					</div>
-					
-					<!-- Tabs Arrow -->
-					<div class="arrow hidden-sm hidden-xs"><i class="fa fa-caret-up"></i></div>
-					
-					<!-- Nav tabs -->
-					<ul class="nav nav-tabs" role="tablist">
-						<li class="active"><a href="#tab1" role="tab" data-toggle="tab"><i class="fa fa-magic pr-10"></i> Very Flexible</a></li>
-						<li><a href="#tab2" role="tab" data-toggle="tab"><i class="fa fa-life-saver pr-10"></i> Top Notch 24/7 Support</a></li>
-						<li><a href="#tab3" role="tab" data-toggle="tab"><i class="fa fa-expand pr-10"></i> 100% Responsive</a></li>
-						<li><a href="#tab4" role="tab" data-toggle="tab"><i class="fa fa-file-o pr-10"></i> Well Documented</a></li>
-					</ul>
-
-					<!-- Tab panes -->
-					<div class="tab-content">
-						<div class="tab-pane fade in active" id="tab1">
-							<h1 class="text-center title">Very Flexible</h1>
-							<div class="space"></div>
-							<div class="row">
-								<div class="col-md-6">
-									<ul class="list-icons">
-										<li><i class="icon-check pr-10"></i> Lorem ipsum dolor sit amet maiores</li>
-										<li><i class="icon-check pr-10"></i> Consectetur adipisicing elit</li>
-										<li><i class="icon-check pr-10"></i> Aut earum numquam hic placeat</li>
-										<li><i class="icon-check pr-10"></i> Fugiat rem consequatur neque</li>
-										<li><i class="icon-check pr-10"></i> Vitae magnam commodi repellendus</li>
-										<li><i class="icon-check pr-10"></i> Expedita placeat omnis pariatur</li>
-										<li><i class="icon-check pr-10"></i> Fugiat rem consequatur neque</li>
-									</ul>
-								</div>
-								<div class="col-md-6">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere hic qui non placeat ad explicabo dignissimos amet iusto veniam!</p>
-									<p>Quo expedita tempore modi minima at adipisci saepe excepturi alias consequuntur sunt asperiores enim ut assumenda hic vitae, odio deleniti illo, veniam quas!</p>
-									<a href="page-services.html" class="btn btn-default">Read more</a>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="tab2">
-							<h1 class="text-center title">Top Notch 24/7 Support</h1>
-							<div class="space"></div>
-							<div class="row">
-								<div class="col-md-6">
-									<ul class="list-icons">
-										<li><i class="icon-check pr-10"></i> Consectetur adipisicing elit</li>
-										<li><i class="icon-check pr-10"></i> Aut earum numquam hic placeat</li>
-										<li><i class="icon-check pr-10"></i> Fugiat rem consequatur neque</li>
-										<li><i class="icon-check pr-10"></i> Vitae magnam commodi repellendus</li>
-										<li><i class="icon-check pr-10"></i> Expedita placeat omnis pariatur</li>
-										<li><i class="icon-check pr-10"></i> Fugiat rem consequatur neque</li>
-										<li><i class="icon-check pr-10"></i> Lorem ipsum dolor sit amet maiores</li>
-									</ul>
-								</div>
-								<div class="col-md-6">
-									<p>Dolor sit amet, consectetur adipisicing elit. Facere hic qui non placeat ad explicabo dignissimos amet iusto veniam!</p>
-									<p>Expedita tempore modi minima at adipisci saepe excepturi alias consequuntur sunt asperiores enim ut assumenda hic vitae, odio deleniti illo, veniam quas!</p>
-									<a href="page-services.html" class="btn btn-default">Read more</a>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="tab3">
-							<h1 class="text-center title">100% Responsive</h1>
-							<div class="space"></div>
-							<div class="row">
-								<div class="col-md-6">
-									<ul class="list-icons">
-										<li><i class="icon-check pr-10"></i> Aut earum numquam hic placeat</li>
-										<li><i class="icon-check pr-10"></i> Fugiat rem consequatur neque</li>
-										<li><i class="icon-check pr-10"></i> Vitae magnam commodi repellendus</li>
-										<li><i class="icon-check pr-10"></i> Expedita placeat omnis pariatur</li>
-										<li><i class="icon-check pr-10"></i> Fugiat rem consequatur neque</li>
-										<li><i class="icon-check pr-10"></i> Lorem ipsum dolor sit amet maiores</li>
-										<li><i class="icon-check pr-10"></i> Consectetur adipisicing elit</li>
-									</ul>
-								</div>
-								<div class="col-md-6">
-									<p>Ipsum dolor sit amet, consectetur adipisicing elit. Facere hic qui non placeat ad explicabo dignissimos amet iusto veniam!</p>
-									<p>Tempore modi minima at adipisci saepe excepturi alias consequuntur sunt asperiores enim ut assumenda hic vitae, odio deleniti illo, veniam quas!</p>
-									<a href="page-services.html" class="btn btn-default">Read more</a>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="tab4">
-							<h1 class="text-center title">Well Documented</h1>
-							<div class="space"></div>
-							<div class="row">
-								<div class="col-md-6">
-									<ul class="list-icons">
-										<li><i class="icon-check pr-10"></i> Fugiat rem consequatur neque</li>
-										<li><i class="icon-check pr-10"></i> Vitae magnam commodi repellendus</li>
-										<li><i class="icon-check pr-10"></i> Expedita placeat omnis pariatur</li>
-										<li><i class="icon-check pr-10"></i> Fugiat rem consequatur neque</li>
-										<li><i class="icon-check pr-10"></i> Lorem ipsum dolor sit amet maiores</li>
-										<li><i class="icon-check pr-10"></i> Consectetur adipisicing elit</li>
-										<li><i class="icon-check pr-10"></i> Aut earum numquam hic placeat</li>
-									</ul>
-								</div>
-								<div class="col-md-6">
-									<p>Sit amet, consectetur adipisicing elit. Facere hic qui non placeat ad explicabo dignissimos amet iusto veniam!</p>
-									<p>Modi minima at adipisci saepe excepturi alias consequuntur sunt asperiores enim ut assumenda hic vitae, odio deleniti illo, veniam quas!</p>
-									<a href="page-services.html" class="btn btn-default">Read more</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- tabs end -->
-	
-			</div>
-		</div>
-	</div>
-</div>
-<!-- section end -->
-
-<!-- section start -->
-<!-- ================ -->
-<div class="section gray-bg clearfix">
-	<div class="owl-carousel content-slider">
-		<div class="testimonial">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<h2 class="title">Just Perfect!</h2>
-						<div class="testimonial-image">
-							<img src="images/testimonial-1.jpg" alt="Jane Doe" title="Jane Doe" class="img-circle">
-						</div>
-						<div class="testimonial-body">
-							<p>Sed ut perspiciatis unde omnis iste natu error sit voluptatem accusan tium dolore laud antium,  totam rem dolor sit amet tristique pulvinar, turpis arcu rutrum nunc, ac laoreet turpis augue a justo.</p>
-							<div class="testimonial-info-1">- Jane Doe</div>
-							<div class="testimonial-info-2">By Company</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="testimonial">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<h2 class="title">Wow amazing!</h2>
-						<div class="testimonial-image">
-							<img src="images/testimonial-2.jpg" alt="Jane Doe" title="Jane Doe" class="img-circle">
-						</div>
-						<div class="testimonial-body">
-							<p>Turpis arcu rutrum nunc, ac laoreet turpis augue a justo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, esse, animi maxime voluptate tempore at sunt labore incidunt nulla dignissimos iusto ad similique inventore distinctio quam repellendus itaque minus minima.</p>
-							<div class="testimonial-info-1">- John Doe</div>
-							<div class="testimonial-info-2">By Company</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="testimonial">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<h2 class="title">Thanks!</h2>
-						<div class="testimonial-image">
-							<img src="images/testimonial-3.jpg" alt="Jane Doe" title="Jane Doe" class="img-circle">
-						</div>
-						<div class="testimonial-body">
-							<p>Phosfluorescently e-enable adaptive synergy for strategic quality vectors. Continually transform fully tested expertise with competitive technologies ac laoreet turpis augue a justo.</p>
-							<div class="testimonial-info-1">- John Doe</div>
-							<div class="testimonial-info-2">By Company</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- section end -->
-
-<!-- section start -->
-<!-- ================ -->
-<div class="section clearfix">
-
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-
-				<h2>Our Work</h2>
-				<div class="separator-2"></div>
-				<p>Sed ut Perspiciatis Unde Omnis Iste Sed ut sit  voluptatem accusan tium </p>
-				<div class="owl-carousel carousel">
-					<div class="image-box object-non-visible" data-animation-effect="fadeInLeft" data-effect-delay="300">
-						<div class="overlay-container">
-							<img src="images/portfolio-1.jpg" alt="">
-							<div class="overlay">
-								<div class="overlay-links">
-									<a href="portfolio-item.html"><i class="fa fa-link"></i></a>
-									<a href="images/portfolio-1.jpg" class="popup-img"><i class="fa fa-search-plus"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="image-box-body">
-							<h3 class="title"><a href="portfolio-item.html">Project Title</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci accusamus accusantium.</p>
-							<a href="portfolio-item.html" class="link"><span>Read More</span></a>
-						</div>
-					</div>
-					<div class="image-box object-non-visible" data-animation-effect="fadeInLeft" data-effect-delay="200">
-						<div class="overlay-container">
-							<img src="images/portfolio-2.jpg" alt="">
-							<div class="overlay">
-								<div class="overlay-links">
-									<a href="portfolio-item.html"><i class="fa fa-link"></i></a>
-									<a href="images/portfolio-2.jpg" class="popup-img"><i class="fa fa-search-plus"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="image-box-body">
-							<h3 class="title"><a href="portfolio-item.html">Project Title</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci accusamus accusantium.</p>
-							<a href="portfolio-item.html" class="link"><span>Read More</span></a>
-						</div>
-					</div>
-					<div class="image-box object-non-visible" data-animation-effect="fadeInLeft" data-effect-delay="100">
-						<div class="overlay-container">
-							<img src="images/portfolio-3.jpg" alt="">
-							<div class="overlay">
-								<div class="overlay-links">
-									<a href="portfolio-item.html"><i class="fa fa-link"></i></a>
-									<a href="images/portfolio-3.jpg" class="popup-img"><i class="fa fa-search-plus"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="image-box-body">
-							<h3 class="title"><a href="portfolio-item.html">Project Title</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci accusamus accusantium.</p>
-							<a href="portfolio-item.html" class="link"><span>Read More</span></a>
-						</div>
-					</div>
-					<div class="image-box object-non-visible" data-animation-effect="fadeInLeft" data-effect-delay="0">
-						<div class="overlay-container">
-							<img src="images/portfolio-4.jpg" alt="">
-							<div class="overlay">
-								<div class="overlay-links">
-									<a href="portfolio-item.html"><i class="fa fa-link"></i></a>
-									<a href="images/portfolio-4.jpg" class="popup-img"><i class="fa fa-search-plus"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="image-box-body">
-							<h3 class="title"><a href="portfolio-item.html">Project Title</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci accusamus accusantium.</p>
-							<a href="portfolio-item.html" class="link"><span>Read More</span></a>
-						</div>
-					</div>
-					<div class="image-box">
-						<div class="overlay-container">
-							<img src="images/portfolio-5.jpg" alt="">
-							<div class="overlay">
-								<div class="overlay-links">
-									<a href="portfolio-item.html"><i class="fa fa-link"></i></a>
-									<a href="images/portfolio-5.jpg" class="popup-img"><i class="fa fa-search-plus"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="image-box-body">
-							<h3 class="title"><a href="portfolio-item.html">Project Title</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci accusamus accusantium.</p>
-							<a href="portfolio-item.html" class="link"><span>Read More</span></a>
-						</div>
-					</div>
-					<div class="image-box">
-						<div class="overlay-container">
-							<img src="images/portfolio-6.jpg" alt="">
-							<div class="overlay">
-								<div class="overlay-links">
-									<a href="portfolio-item.html"><i class="fa fa-link"></i></a>
-									<a href="images/portfolio-6.jpg" class="popup-img"><i class="fa fa-search-plus"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="image-box-body">
-							<h3 class="title"><a href="portfolio-item.html">Project Title</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci accusamus accusantium.</p>
-							<a href="portfolio-item.html" class="link"><span>Read More</span></a>
-						</div>
-					</div>
-					<div class="image-box">
-						<div class="overlay-container">
-							<img src="images/portfolio-7.jpg" alt="">
-							<div class="overlay">
-								<div class="overlay-links">
-									<a href="portfolio-item.html"><i class="fa fa-link"></i></a>
-									<a href="images/portfolio-7.jpg" class="popup-img"><i class="fa fa-search-plus"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="image-box-body">
-							<h3 class="title"><a href="portfolio-item.html">Project Title</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci accusamus accusantium.</p>
-							<a href="portfolio-item.html" class="link"><span>Read More</span></a>
-						</div>
-					</div>
-					<div class="image-box">
-						<div class="overlay-container">
-							<img src="images/portfolio-8.jpg" alt="">
-							<div class="overlay">
-								<div class="overlay-links">
-									<a href="portfolio-item.html"><i class="fa fa-link"></i></a>
-									<a href="images/portfolio-8.jpg" class="popup-img"><i class="fa fa-search-plus"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="image-box-body">
-							<h3 class="title"><a href="portfolio-item.html">Project Title</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci accusamus accusantium.</p>
-							<a href="portfolio-item.html" class="link"><span>Read More</span></a>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-</div>
-<!-- section end -->
 
 
 @stop

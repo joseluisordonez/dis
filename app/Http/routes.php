@@ -14,7 +14,18 @@
 Route::get('/', 'PpalController@index');
 Route::get('/nosotros', 'PpalController@nosotros');
 Route::get('/contacto', 'PpalController@contacto');
-
+Route::get('/producto/{id}',[
+		'uses'	=>	'PpalController@producto',
+		'as'	=>	'producto'
+	]);
+Route::get('/productos',[
+		'uses'	=>	'PpalController@productos',
+		'as'	=>	'productos'
+	]);
+Route::get('/categoria/{id}',[
+		'uses'	=>	'PpalController@categoria',
+		'as'	=>	'categoria'
+	]);
 Route::group(['prefix' => 'admin', 'middleware'=>'auth'], function(){//middleware =>Auth significa que tiene que esta autentificado para poder entrar a esas rutas
 	Route::get('/',[
 		'uses' =>'PpalController@admin',

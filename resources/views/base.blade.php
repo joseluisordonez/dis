@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="es" class="ie9"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="ie8"> <![endif]-->
 <!--[if !IE]><!-->
-<html lang="en">
+<html lang="es">
 <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
@@ -42,7 +42,12 @@
 
 							<!-- header-top-first start -->
 							<!-- ================ -->
-							<div class="header-top-first"><i class="fa fa-phone-square">  Tel.(625)106.66.18</i></div>
+							<div class="header-top-first clearfix">
+								<ul class="social-links clearfix hidden-xs">
+									<li class="facebook"><a target="_blank" href="https://www.facebook.com/distribuidorainsdustrialdelasierra"><i class="fa fa-facebook"></i></a></li>
+									<li class="pinterest"><a href="{{URL::to('/contacto')}}"><i class="fa fa-envelope"></i></a></li>
+								</ul>
+							</div>
 								
 							
 							<!-- header-top-first end -->
@@ -61,8 +66,8 @@
 									<div class="btn-group dropdown">
 
 										@if (Auth::user())
-											<a href="{{route('admin')}}" class="btn"><i class="fa fa-user"></i> {{Auth::user()->name}}</a>
-											<a href="{{route('logout')}}" class="btn"><i class="fa fa-out"></i> Salir</a>
+											<a href="{{route('admin')}}" class="btn dropdown-toggle"><i class="fa fa-user"></i> {{Auth::user()->name}}</a>
+											<a href="{{route('logout')}}" class="btn"><i class="fa fa-sign-out"></i> Salir</a>
 										@else
 											<a href="{{route('login')}}" class="btn"><i class="fa fa-user"></i> Login</a>
 										@endif
@@ -137,11 +142,11 @@
 													<li class=" {{ Request::is( 'nosotros') ? 'active' : '' }}">
 													<a href="{{ URL::to( '/nosotros') }}">nosotros</a></li>
 													<li class="dropdown {{ Request::is( '/productos') ? 'active' : '' }}">
-													<a>Productos</a>
+													<a href="{{route('productos')}}">Productos</a>
 														<ul class="dropdown-menu">
-															<li><a href="{{ URL::to( '/seguridad') }}">Equipo de Seguridad</a></li>
-															<li><a href="{{ URL::to( '/abrasivos') }}">Abrasivos</a></li>
-															<li><a href="{{ URL::to( '/soldadura') }}">Soldadura</a></li>
+															<li><a href="{{route('categoria',1)}}">Abrasivos</a></li>
+															<li><a href="{{route('categoria',2)}}">Seguridad</a></li>
+															<li><a href="{{route('categoria',3)}}">Soldadura</a></li>											
 														</ul>
 													</li>
 													<li class=" {{ Request::is( '/contacto') ? 'active' : '' }}">
@@ -278,9 +283,9 @@
 									</div>   
 									<div class="collapse navbar-collapse" id="navbar-collapse-2">
 										<ul class="nav navbar-nav">
-											<li><a href="index">Inicio</a></li>
-											<li><a href="nosotros">Nosotros</a></li>
-											<li><a href="contacto">Contacto</a></li>
+											<li><a href="{{URL::to('/')}}">Inicio</a></li>
+											<li><a href="{{URL::to('nosotros')}}">Nosotros</a></li>
+											<li><a href="{{URL::to('contacto')}}">Contacto</a></li>
 								
 										</ul>
 									</div>
