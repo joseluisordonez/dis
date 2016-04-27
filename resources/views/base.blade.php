@@ -102,7 +102,7 @@
 
 								<!-- logo -->
 								<div class="logo">
-									<a href="index.html"><img id="logo" src="{{ asset('images/logodis.png')}}" alt="Distribuidorais.com"></a>
+									<a href="{{URL::to('/')}}"><img id="logo" src="{{ asset('images/logodis.png')}}" alt="Distribuidorais.com"></a>
 								</div>
 
 							</div>
